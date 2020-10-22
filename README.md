@@ -39,9 +39,9 @@ $anisble --version
 #"changed": false,  
 #"ping": "pong"  
 #}
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++     
 #Note that above ping is not ICMP ping; for this ping to be sucess. the device to be pinged, should be reachable via SSH.  
-#Example :
+
 #+++++ Example#2 : call host by group under file name ++++++++++++++++  
 #format is :   $ansible 'host1' -i file_name group_name_in_file -m command [-u user_name]  
 #[root@192-168-1-108 ansible-buttler]# ansible -i inventory linux_servers -m ping  
@@ -52,7 +52,7 @@ $anisble --version
 #"changed": false, 
 #"ping": "pong"  
 #}
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ========================================================================================================================================  
 
