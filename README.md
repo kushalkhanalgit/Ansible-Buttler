@@ -21,7 +21,7 @@ $ which python
 ## Install Ansible on the CentOS  
 
 ==================================
-
+#install ansible via Python's pip package not EPEL library of CentOS
 $pip3 install ansible  
 #verify installation  
 $which ansible  
