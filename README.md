@@ -8,15 +8,15 @@ b) Simply have a new VM created - my VM has 20GB harddisk , 8GB RAM and 12 core 
 But its pretty straight forward
 
 ## Install Python3 on CentOS
-# dnf - dandified is new version of yum
+#dnf - dandified is new version of yum
 $ sudo dnf install python3
-# verify : where and which Python?
+#verify : where and which Python?
 $ python --version 
 $ which python
 
 ## Install Ansible on the CentOS  
 
-==================================
-$pip3 install ansible
+==================================  
+$pip3 install ansible  
 
-==================================
+==================================  
