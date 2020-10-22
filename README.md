@@ -56,6 +56,17 @@ $anisble --version
 
 ==================================================================================  
 
+## Create free DevNet account in Cisco cloud simulator : VIRL  
+
+===================================================================================  
+
+#Refer to following instrution from David on how to create it :  
+#https://www.youtube.com/watch?v=TmGNtvh1eeY  
+#Basically, we will now get a server where we can ssh onto ; then we can create a lab  
+#with few nodes in there, and have its inventory listed to query the routers info  
+
+===================================================================================  
+
 
 
 
