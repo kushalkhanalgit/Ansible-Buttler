@@ -38,7 +38,7 @@ $anisble --version
 #127.0.0.1 | SUCCESS => {
 #"changed": false,  
 #"ping": "pong"  
-#}
+#}  
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++     
 #Note that above ping is not ICMP ping; for this ping to be sucess. the device to be pinged, should be reachable via SSH.  
 
