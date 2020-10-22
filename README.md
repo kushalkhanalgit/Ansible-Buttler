@@ -20,11 +20,11 @@ $ which python
 
 ## Install Ansible on the CentOS  
 
-==================================  
+==================================
 
 $pip3 install ansible  
-#verify installation
-$which ansible
+#verify installation  
+$which ansible  
 $anisble --version  
 
 ==================================  
