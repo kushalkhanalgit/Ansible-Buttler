@@ -73,9 +73,21 @@ $anisble --version
 #test SSH to this offered device :  
 $ssh -v developer@ios-xe-mgmt.cisco.com -p 8181  
 # Test connection via Ansible
-#prepare a file to be used for connection. Example : check 'inventory' in files list   
+#prepare a file to be used for connection. Example : check 'inventory' in 
+#files list. 
+#Ensure you have paramiko (for ssh sessions to NE) with : $pip3 show paramiko.    
+#Else install it as : $pip3 install paramiko  
+#Ping test ( note: this is not ICMP, and Ansible needs to be able to ssh end  
+#host for this to be success.  
+$ansible -i inventory virl_router -m ping  
 
-===================================================================================  
+#now if we want to send ad-hoc commands as if we are inside router,where we need to  
+#mention to i) file where IP element or servers are ii) which group we want to play  
+#in the file iii)this being Cisco , command type is ios_command, then with switch 'a'  
+#we mention what command we want to push  
+$ansible -i inventory virl_router -m ios_command -a "commands='show ip interface brief'"                                  
+
+=============================================================================  
 
 
 
