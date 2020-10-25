@@ -1,0 +1,20 @@
+- name: add_interface
+  hosts: virl_router
+
+  tasks:
+   - name: dryrun BEFORE (current) interface list
+     ansible.netcommon.cli_command:
+      command: show ip int bri
+    register: result
+    var: result.stdout_lines
+
+   -name : ADDing loopback interface
+      ios_interface:
+        name: loopback333
+        state: present
+
+   -name : dryrun AFTER config interface list                                                                                    
+     ansible.netcommon.cli_command:                                                                                            
+       command: show ip int bri                                                                                               
+     register: result                                                                                                        
+     var: result.stdout_lines
