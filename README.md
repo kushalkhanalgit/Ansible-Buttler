@@ -90,12 +90,12 @@ $ansible -i inventory virl_router -m ping
 $ansible -i inventory virl_router -m ios_command -a "commands='show ip interface brief'"                                  
 
 ============================================================================  
-# Run playbooks for Ansible - "Hello world " kind
-#Create some playbook in yaml or yml file. Refer into the repository : as
-#basic_playbook_add_interface.yml and basic_playbook_add_interface_with_sanity.yml
-#first one just configures a loopback and second one builds up: performs some sanity
-#checks
-$ansible-playbook -i inventory  basic_playbook_add_interface_with_sanity.yml
+# Run playbooks for Ansible - "Hello world " kind  
+#Create some playbook in yaml or yml file. Refer into the repository : as  
+#basic_playbook_add_interface.yml and basic_playbook_add_interface_with_sanity.yml  
+#first one just configures a loopback and second one builds up: performs some sanity    
+#checks. WARNING : the playbook isn't showing 'idempotent' behavior of Ansible  
+$ansible-playbook -i inventory  basic_playbook_add_interface_with_sanity.yml  
 
 
 
