@@ -1,0 +1,20 @@
+#we are playing with free Cisco IOS-XE rotuer from VIRL labs hence, needs creds from the https://devnetsandbox.cisco.com/RM/Diagram/Index/27d9747a-db48-4565-8d44-df318fce37ad?diagramType=Topology
+#It has following access details:  
+#CSR1000V Host: ios-xe-mgmt.cisco.com  
+#SSH Port: 8181  
+#NETCONF Port: 10000  
+#RESTCONF Ports: 9443 (HTTPS)  
+#Username: developer  
+#Password: C1sco12345  
+
+#first name the group where we want to connect, followed by device IP or FQDN  
+[virl_router]  
+ios-xe-mgmt.cisco.com  
+
+#needs connection details as provided in the Cisco's VIRL sandbox lab 'IOS XE on CSR Recommended Code AlwaysOn'  
+[virl_router:vars]  
+ansible_user=developer  
+ansible_password=C1iso12345  
+ansible_connection=network_cli  
+ansible_network_os=ios  
+ansible_port=8181  
