@@ -75,9 +75,9 @@ $ssh -v developer@ios-xe-mgmt.cisco.com -p 8181
 # Test connection via Ansible
 #prepare a file to be used for connection. Example : check 'inventory' in 
 #files list.  
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 #Ensure you have paramiko (for ssh sessions to NE) with : $pip3 show paramiko.    
-#Else install it as : $pip3 install paramiko 
+#Else install it as : $pip3 install paramiko  
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #Ping test ( note: this is not ICMP, and Ansible needs to be able to ssh end  
 #host for this to be success.  
@@ -89,7 +89,13 @@ $ansible -i inventory virl_router -m ping
 #we mention what command we want to push  
 $ansible -i inventory virl_router -m ios_command -a "commands='show ip interface brief'"                                  
 
-=============================================================================  
+============================================================================  
+# Run playbooks for Ansible - "Hello world " kind
+#Create some playbook in yaml or yml file. Refer into the repository : as
+#basic_playbook_add_interface.yml and basic_playbook_add_interface_with_sanity.yml
+#first one just configures a loopback and second one builds up: performs some sanity
+#checks
+$ansible-playbook -i inventory  basic_playbook_add_interface_with_sanity.yml
 
 
 
