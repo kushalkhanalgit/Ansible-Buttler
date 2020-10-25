@@ -62,12 +62,19 @@ $anisble --version
 
 #Refer to following instrution from David on how to create it :  
 #https://www.youtube.com/watch?v=TmGNtvh1eeY  
-#Basically, we will now get a server where we can ssh onto ; then we can create a lab    
-#with few nodes in there, and have its inventory listed to query the routers info  
-#Once you create your account and loginto : http://bit.ly/freecml , under CML tab  
-#you will find instruction on SSH details and what IP/name to be used to connect to  
-#the nodes created.  
-  
+#Basically, we will now get a server where we can ssh onto ; then we use one sandbox     
+#which has inventory of Cisco XE in order to perform some programming  
+#Once you create your account and loginto : http://bit.ly/freecml , go to  
+#'SANDBOX LABS' next to 'RESERVATIONS'. Remember we are not reserving a slot to  
+#perform lab. On left to 'BROWSE BY CATEGORY' , in the drop-down select 'Always-On'.  
+#Select 'IOS XE on CSR Recommended Code AlwaysOn'. Now in 'INSTRUCTIONS' tab, if you   
+#browse down, you will have details how to connect to this IOS XE under 'Access Details'  
+
+#test SSH to this offered device :  
+$ssh -v developer@ios-xe-mgmt.cisco.com -p 8181  
+# Test connection via Ansible
+#prepare a file to be used for connection. Example : check 'inventory' in files list   
+
 ===================================================================================  
 
 
